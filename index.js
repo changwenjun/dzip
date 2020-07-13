@@ -1,4 +1,4 @@
-import { obj } from './zip.js'
+import { obj } from './package/zip.js'
 export default class ZipArchive {
     constructor() {
         this.name = 'untitled';
