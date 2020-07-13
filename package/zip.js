@@ -26,8 +26,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import { getMimeType } from './mime-types'
-import { globalDeflater } from './packagejs/deflate'
-import { globalInflater } from './packagejs/inflate'
+import { globalDeflater } from './deflate'
+import { globalInflater } from './inflate'
 let obj = {}
 var ERR_BAD_FORMAT = 'File format is not recognized.'
 var ERR_CRC = 'CRC failed.'

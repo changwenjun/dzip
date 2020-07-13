@@ -1,5 +1,5 @@
 import { obj } from './zip.js'
-export class ZipArchive {
+export default class ZipArchive {
     constructor() {
         this.name = 'untitled';
         this.zippedBlob = {};
