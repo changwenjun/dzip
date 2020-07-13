@@ -4,7 +4,7 @@ javascript  压缩打包下载文件（最大4g）
 
 #### import dzip from 'dzip';
 
-#### const zip = new ZipArchive();
+#### const zip = new dzip();
 
 #### zip.addFile('folder/name', blob)
 
