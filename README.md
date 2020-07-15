@@ -2,6 +2,7 @@
 javascript  压缩打包下载文件（最大4g）
 ### example：
 
+#### npm install dzip --save
 #### import dzip from 'dzip';
 
 #### const zip = new dzip();
