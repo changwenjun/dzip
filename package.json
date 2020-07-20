@@ -1,11 +1,14 @@
 {
   "name": "dzip",
-  "version": "1.2.0",
+  "version": "1.14.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "__npminstall_done": "Tue Jul 14 2020 11:32:48 GMT+0800 (GMT+08:00)",
+  "_from": "dzip@1.2.0",
+  "_resolved": "https://registry.npm.taobao.org/dzip/download/dzip-1.2.0.tgz?cache=0&sync_timestamp=1594697476384&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdzip%2Fdownload%2Fdzip-1.2.0.tgz"
 }

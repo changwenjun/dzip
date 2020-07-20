@@ -7,6 +7,7 @@ export default class ZipArchive {
         this.fileNum = 0;
         this.onend = ()=>{};
         this.onprogress = () => { };
+        this.errorInfo = '';
         // 创建一个延迟对象;
         // var def = this.defer = new $.Deferred()
         this.defer = new Promise((resolve, reject) => {
@@ -14,17 +15,15 @@ export default class ZipArchive {
                 // this.zipWriter = zipWriter
                 // 继续执行队列;
                 resolve(zipWriter)
-            }, this.onerror)
+            }, (e) => {
+                this.errorInfo=e
+            })
         })
         this.blob = (filename, content) => {
             return new Blob([content], {
                 type: obj.zip.getMimeType(filename)
             })
         }
-    }
-
-    onerror(e) {
-        console.log(e)
     }
     /**
      * @desc 添加文件
@@ -38,6 +37,10 @@ export default class ZipArchive {
     addFile(filename, content, options) {
         let blob = this.blob(filename, content)
         // 为了产生链式的效果， 必须把deferrer赋值给新的defer
+        if (this.errorInfo !== '') {
+            console.log(this.errorInfo)
+            return Promise.reject('压缩文件异常！')
+        }
         return this.defer = this.defer.then((zipWriter) => {
             return new Promise((resolve, reject) => {
                 zipWriter.add(filename, new obj.zip.BlobReader(blob), () => {
@@ -95,4 +98,4 @@ export default class ZipArchive {
         throw new Error('Create Zip File Error!')
     }
 }
-
+window.ZipArchive = ZipArchive;
