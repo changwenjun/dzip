@@ -3,6 +3,8 @@ dzip [![Build Status](https://api.travis-ci.org/Stuk/jszip.svg?branch=master)](h
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/jszip.svg)](https://github.com/changwenjun/dzip)
 
+Support 4g file download each time, jszip is not the opponent
+
 A library for creating, reading and editing .zip files with JavaScript, with a
 lovely and simple API.
 
